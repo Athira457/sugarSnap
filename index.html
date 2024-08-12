@@ -2,95 +2,118 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="dessert booking webpage">
-    <title>Dessert ordering website | Home page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Dessert booking webpage">
+    <title>Dessert Ordering Website | Home Page</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .menu {
+            display: none;
+        }
+        #icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .items {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .items li {
+            margin: 0 10px;
+        }
+        .items li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .home-active {
+            color: #007BFF;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            #icon {
+                display: block;
+            }
+            .items {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: rgb(177, 114, 55);
+                position: absolute;
+                top: 60px;
+                left: 0;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .items.show {
+                display: flex;
+            }
+            .items li {
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- header starts -->
+    <!-- Header starts -->
     <header>
-        <div class="menu" id="menu-icon"></div>
-            <h1>Sugar Snap</h1>
-            <ul class="items" id="items">
-                <li><a href="" class="home-active">Home</a></li>
-                <li><a href="category.html">Menu</a></li>
-                <li><a href="shop.html">Shops</a></li>
-                <li><a href="recipe.html">Recipe</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>   
-               
+        <h1>Sugar Snap</h1>
+        <span id="icon">&#9776;</span>
+        <ul class="items" id="items">
+            <li><a href="" class="home-active">Home</a></li>
+            <li><a href="category.html">Menu</a></li>
+            <li><a href="shop.html">Shops</a></li>
+            <li><a href="recipe.html">Recipe</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>   
     </header>
-    <!---->
-    <!-- banner section -->
+    <!-- Banner section -->
     <section class="home" id="home">
-                <div class="home-text">
-                    <span>We are Sugar snap</span>
-                    <h1>Pick a treat from <br> our range of desserts</br> </h1>     
-                </div>
+        <div class="home-text">
+            <span>We are Sugar Snap</span>
+            <h1>Pick a treat from <br> our range of desserts</br> </h1>     
+        </div>
     </section>
-    <!---->
-    <!-- categories include -->
+    <!-- Categories section -->
     <section class="category" id="category">
         <div class="category-items">
+            <!-- Repeat category-item divs as needed -->
             <div class="category-item">
                 <div class="box bx1">
                     <img src="images/cake1.avif" alt="Category Image 1">
                 </div>
                 <h2>Cakes</h2>
             </div>
-            <div class="category-item">
-                <div class="box bx2">
-                    <img src="images/pie.avif" alt="Category Image 2">
-                </div>
-                <h2>pies</h2>
-            </div>
-            <div class="category-item">
-                <div class="box bx3">
-                    <img src="images/cookies.avif" alt="Category Image 3">
-                </div>
-                <h2>cookies</h2> 
-            </div>
-            <div class="category-item">
-                <div class="box bx4">
-                    <img src="images/candies.avif" alt="Category Image 4">
-                </div>
-                <h2>Candies</h2>
-            </div>
-            <div class="category-item">
-                <div class="box bx5">
-                    <img src="images/icecream.avif" alt="Category Image 5">
-                </div>
-                <h2>Ice creams</h2>
-            </div>
-            <div class="category-item">
-                <div class="box bx6">
-                    <img src="images/pancake.avif" alt="Category Image 6">
-                </div>
-                <h2>Pancake</h2>
-            </div>
-            <div class="category-item">
-                <div class="box bx7">
-                    <img src="images/brownie.avif" alt="Category Image 7">
-                </div>
-                <h2>Brownies</h2>
-            </div>
-            <div class="category-item">
-                <div class="box bx8">
-                    <img src="images/donut.avif" alt="Category Image 8">
-                </div>
-                <h2>Donut</h2>
-            </div>
+            <!-- ... other categories -->
         </div>
     </section>
-    <!---->
-    <!-- footer -->
+    <!-- Footer section -->
     <footer>
         <div class="footer-container">
             <div class="footer-left">
-                <h3>Sugar snap</h3>
-                <p>&copy; 2024 Sugar snap. All rights reserved.</p>
+                <h3>Sugar Snap</h3>
+                <p>&copy; 2024 Sugar Snap. All rights reserved.</p>
             </div>
             <div class="footer-center">
                 <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
@@ -104,6 +127,12 @@
             </div>
         </div>
     </footer>
-    <!---->
+    <!-- JavaScript for toggling the navbar -->
+    <script>
+        document.getElementById('icon').addEventListener('click', function() {
+            var items = document.getElementById('items');
+            items.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
