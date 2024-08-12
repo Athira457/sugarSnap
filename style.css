@@ -21,6 +21,11 @@ body{
     background-size: cover;
 }
 
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
 h2{
     font-family: 'Times New Roman', Times, serif;
     font-weight: 700;
@@ -34,28 +39,39 @@ body {
     font-family: Arial, sans-serif;
 }
 
-header{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    right: 0;
+header {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(177, 114, 55);
-    padding: 20px 150px 15px 20px;
-    transition: 0.5s;   
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #c5981e;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.items{
-display: flex;
-column-gap: 0.5rem;
+.menu {
+    display: none;
 }
 
-.items a{
-    font-size: 1rem;
-    font-weight: 500;
-    color: rgb(0, 0, 0);
-    padding: 0.5rem 1rem;
+#icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.items li {
+    margin: 0 10px;
+}
+.items li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
 }
 
 .items a:hover, .items .home-active{
@@ -63,6 +79,11 @@ column-gap: 0.5rem;
     border-radius: 5rem;
     color: rgb(52, 211, 150);
     transition: 0.5s;
+}
+
+
+.home-active {
+    color: #007BFF;
 }
 
 section{
@@ -513,28 +534,28 @@ footer {
     cursor: pointer;
 }
 
-/* responsive menubar */
+/* responsive navbar */
 
-@media screen and (max-width:547px) {
-
-    .menu {
-        text-align: left;
-        margin-right: 0.1px;
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    #icon {
+        display: block;
     }
-    .items{ 
-        float: none;
-        margin-top: 40px;
-        margin-left: 0;
-        text-align: left;
-        margin-right: 200px;
+    .items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(177, 114, 55);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .items li{
-        font-size: 14px;
-        padding: 0;
+    .items.show {
+        display: flex;
     }
-    .home-text h1{
-        font-weight: 1.4rem;
+    .items li {
+        margin: 10px 0;
+        text-align: center;
     }
-
 }
-
