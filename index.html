@@ -6,79 +6,11 @@
     <meta name="description" content="Dessert booking webpage">
     <title>Dessert Ordering Website | Home Page</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #f8f8f8;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .menu {
-            display: none;
-        }
-        #icon {
-            display: none;
-            font-size: 30px;
-            cursor: pointer;
-        }
-        .items {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .items li {
-            margin: 0 10px;
-        }
-        .items li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        .home-active {
-            color: #007BFF;
-        }
-
-        /* Responsive styles */
-        @media screen and (max-width: 768px) {
-            #icon {
-                display: block;
-            }
-            .items {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background-color: rgb(177, 114, 55);
-                position: absolute;
-                top: 60px;
-                left: 0;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            }
-            .items.show {
-                display: flex;
-            }
-            .items li {
-                margin: 10px 0;
-                text-align: center;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header starts -->
     <header>
         <h1>Sugar Snap</h1>
-        <span id="icon">&#9776;</span>
         <ul class="items" id="items">
             <li><a href="" class="home-active">Home</a></li>
             <li><a href="category.html">Menu</a></li>
